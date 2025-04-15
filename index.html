@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explora el Océano - Recomendaciones de Buceo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(to bottom, #d0f0f6, #ffffff);
+      color: #023047;
+    }
+    header {
+      background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 5rem 2rem;
+      text-align: center;
+      position: relative;
+    }
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
+    header h1 {
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 3rem;
+      margin: 0;
+      position: relative;
+      z-index: 1;
+    }
+    header p {
+      font-size: 1.3rem;
+      margin-top: 1rem;
+      position: relative;
+      z-index: 1;
+    }
+    .intro {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 2rem;
+    }
+    .product-card {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 300px;
+      padding: 1rem;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+    .product-card img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+    .product-card h3 {
+      margin: 1rem 0 0.5rem;
+      font-family: 'Ubuntu', sans-serif;
+    }
+    .product-card p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+    .product-card a {
+      display: inline-block;
+      margin-top: 1rem;
+      background-color: #00b4d8;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+    .product-card a:hover {
+      background-color: #0096c7;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Explora el Océano</h1>
+    <p>Recomendaciones para buceo y fotografía submarina</p>
+  </header>
+
+  <section class="intro">
+    <p>
+      ¡Bienvenido/a a mi rincón submarino! Aquí comparto mis equipos favoritos para capturar la belleza del océano.
+      Si te apasiona el buceo y la fotografía como a mí, seguro encontrarás algo útil. 🐠📸
+    </p>
+  </section>
+
+  <section class="products">
+    <div class="product-card">
+      <img src="https://m.media-amazon.com/images/I/71zN3vK0f1L._AC_SL1500_.jpg" alt="GoPro HERO12 Black">
+      <h3>GoPro HERO12 Black</h3>
+      <p>La cámara de acción definitiva para tus inmersiones. Video en 5.3K, estabilización brutal y resistencia al agua sin carcasa.</p>
+      <a href="https://amzn.eu/d/3TeMIF1" target="_blank">Ver en Amazon</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 - Web de afiliados creada con 💙 por [Tu Nombre]. Este sitio participa en el programa de afiliados de Amazon.</p>
+  </footer>
+</body>
+</html>
