@@ -1,71 +1,38 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TopBuceo.es</title>
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --azul: #00b4d8;
-      --azul-oscuro: #0096c7;
-      --amarillo: #ffd166;
-      --texto: #023047;
-    }
-
     body {
       margin: 0;
       font-family: 'Montserrat', sans-serif;
       background: linear-gradient(to bottom, #d0f0f6, #ffffff);
-      color: var(--texto);
+      color: #023047;
     }
 
-    /* NAV */
+    /* Menú */
     nav.menu {
-      background-color: var(--azul);
+      background-color: #00b4d8;
       padding: 1rem;
+      text-align: center;
       position: sticky;
       top: 0;
       z-index: 999;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      flex-wrap: wrap;
     }
-
-    nav.menu .logo {
-      font-weight: bold;
+    nav.menu a {
       color: white;
-      font-size: 1.3rem;
-    }
-
-    nav.menu input[type="checkbox"] {
-      display: none;
-    }
-
-    nav.menu label {
-      font-size: 2rem;
-      color: white;
-      cursor: pointer;
-      display: none;
-    }
-
-    nav.menu .nav-links {
-      display: flex;
-      gap: 1.5rem;
-    }
-
-    nav.menu .nav-links a {
-      color: white;
+      margin: 0 1.5rem;
       text-decoration: none;
       font-weight: bold;
       font-size: 1.1rem;
       transition: color 0.3s ease;
     }
-
-    nav.menu .nav-links a:hover {
-      color: var(--amarillo);
+    nav.menu a:hover {
+      color: #ffd166;
     }
 
     header {
@@ -77,7 +44,6 @@
       text-align: center;
       position: relative;
     }
-
     header::before {
       content: "";
       position: absolute;
@@ -86,21 +52,18 @@
       background: rgba(0, 0, 0, 0.5);
       z-index: 0;
     }
-
-    header h1, header p {
-      position: relative;
-      z-index: 1;
-      margin: 0;
-    }
-
     header h1 {
       font-family: 'Ubuntu', sans-serif;
-      font-size: 5rem;
+      font-size: 7rem;
+      margin: 0;
+      position: relative;
+      z-index: 1;
     }
-
     header p {
-      font-size: 2rem;
+      font-size: 3rem;
       margin-top: 1rem;
+      position: relative;
+      z-index: 1;
     }
 
     .intro {
@@ -116,7 +79,7 @@
       max-width: 800px;
       margin: 4rem auto 2rem;
       padding: 0 1rem;
-      font-size: 3rem;
+      font-size: 3.5rem;
       line-height: 1.2;
       font-weight: bold;
       text-align: center;
@@ -139,39 +102,33 @@
       text-align: center;
       transition: transform 0.3s ease;
     }
-
     .product-card:hover {
       transform: translateY(-5px);
     }
-
     .product-card img {
       max-width: 100%;
       border-radius: 8px;
     }
-
     .product-card h3 {
       margin: 1rem 0 0.5rem;
       font-family: 'Ubuntu', sans-serif;
     }
-
     .product-card p {
       font-size: 0.95rem;
       color: #555;
     }
-
     .product-card a {
       display: inline-block;
       margin-top: 1rem;
-      background-color: var(--azul);
+      background-color: #00b4d8;
       color: white;
       padding: 0.6rem 1.2rem;
       border-radius: 8px;
       text-decoration: none;
       transition: background-color 0.3s;
     }
-
     .product-card a:hover {
-      background-color: var(--azul-oscuro);
+      background-color: #0096c7;
     }
 
     footer {
@@ -180,104 +137,69 @@
       font-size: 0.9rem;
       color: #777;
     }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 3rem;
-      }
-
-      header p {
-        font-size: 1.5rem;
-      }
-
-      .intro2, .intro3 {
-        font-size: 2.2rem;
-      }
-
-      nav.menu {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      nav.menu label {
-        display: block;
-      }
-
-      nav.menu .nav-links {
-        flex-direction: column;
-        width: 100%;
-        display: none;
-        margin-top: 1rem;
-      }
-
-      nav.menu input[type="checkbox"]:checked ~ .nav-links {
-        display: flex;
-      }
-
-      nav.menu .nav-links a {
-        padding: 0.5rem 0;
-      }
-    }
   </style>
 </head>
 <body>
-
-  <!-- CABECERA -->
   <header>
     <h1>Disfruta del océano</h1>
     <p>Con estos productos TOP para BUCEO</p>
   </header>
 
-  <!-- MENÚ -->
+  <!-- Menú de navegación -->
   <nav class="menu">
-    <span class="logo">TopBuceo</span>
-    <input type="checkbox" id="toggle-menu">
-    <label for="toggle-menu">☰</label>
-    <div class="nav-links">
-      <a href="#top">Productos Top</a>
-      <a href="#luz">Iluminación</a>
-    </div>
+    <a href="#top">Productos Top</a>
+    <a href="#luz">Iluminación</a>
   </nav>
 
-  <!-- INTRO -->
   <section class="intro">
     <p>
       ¡Bienvenidos/as! Aquí compartiré recomendaciones de productos relacionados con buceo, snorkel y fotografía submarina. 
       Muchos de estos productos los utilizo personalmente, otros muchos son recomendaciones de amigos y conocidos del mundo
       del buceo. No se trata de recomendar cualquier producto para ganar una pequeña comisión, se trata de recomendaciones 
-      que doy a mis alumnos y clientes en el día a día y quiero que vosotros también tengáis acceso a ellas. 🐠🤿📸
+      que doy a mis alumnos y clientes en en el día a día y quiero que vosotros también tengáis acceso a ellas. 🐠🤿📸
     </p>
   </section>
 
   <!-- PRODUCTOS TOP -->
-  <section id="top" class="intro2"><p>PRODUCTOS TOP</p></section>
+  <section id="top" class="intro2">
+    <p>PRODUCTOS TOP</p>
+  </section>
 
   <section class="products">
-    <!-- Tarjetas de producto -->
-    <!-- Repite este bloque para cada producto -->
     <div class="product-card">
       <img src="https://m.media-amazon.com/images/I/71AdtBPWOrL.__AC_SY300_SX300_QL70_ML2_.jpg" alt="Cressi F1">
       <h3>Máscara de buceo Cressi F1</h3>
       <p>La máscara de buceo Cressi F1 es ideal tanto para buceadores con poca experiencia como para los más expertos. Prueba de ello son los más de 7 años que llevo buceando con ella.</p>
       <a href="https://amzn.to/4jb3ICN" target="_blank">Ver en Amazon</a>
     </div>
-    <!-- ...otros productos -->
+    <div class="product-card">
+      <img src="https://m.media-amazon.com/images/I/81tIq1XRWmL._AC_SY450_.jpg" alt="Cressi Lady Swimsuit 2mm">
+      <h3>Bañador térmico Cressi Lady Swimsuit 2mm</h3>
+      <p>Bañador que añade un extra de protección térmica. Lo usa mi mujer en todas sus inmersiones. Un must have para chicas que sean algo frioleras.</p>
+      <a href="https://amzn.to/4iL1xpJ" target="_blank">Ver en Amazon</a>
+    </div>
+    <div class="product-card">
+      <img src="https://m.media-amazon.com/images/I/71lf7gTkToL._AC_SX425_.jpg" alt="Cressi Donatello">
+      <h3>Ordenador de buceo Cressi Donatello</h3>
+      <p>Ordenador de iniciación al buceo recreativo. Con todas las funciones necesarias para disfrutar del buceo de forma segura. Nitrox, planificador de inmersiones, etc. Un ordenador para años.</p>
+      <a href="https://amzn.to/3AUhZ6y" target="_blank">Ver en Amazon</a>
+    </div>
   </section>
 
   <!-- ILUMINACIÓN -->
-  <section id="luz" class="intro3"><p>ILUMINACIÓN</p></section>
+  <section id="luz" class="intro3">
+    <p>ILUMINACIÓN</p>
+  </section>
 
   <section class="products">
     <div class="product-card">
       <img src="https://m.media-amazon.com/images/I/71AdtBPWOrL.__AC_SY300_SX300_QL70_ML2_.jpg" alt="Cressi F1">
       <h3>Máscara de buceo Cressi F1</h3>
-      <p>La máscara de buceo Cressi F1 es ideal tanto para buceadores con poca experiencia como para los más expertos.</p>
+      <p>La máscara de buceo Cressi F1 es ideal tanto para buceadores con poca experiencia como para los más expertos. Prueba de ello son los más de 7 años que llevo buceando con ella.</p>
       <a href="https://amzn.to/4jb3ICN" target="_blank">Ver en Amazon</a>
     </div>
   </section>
 
-  <!-- PIE -->
   <footer>
     <p>Web propiedad de Wallas Diving. Esta web participa en el programa de afiliados de Amazon. Ni topbuceo.es ni Wallas Diving 
       tienen responsabilidad legal sobre ninguna de las compras efectuadas a través de los enlaces publicados en esta web.</p>
