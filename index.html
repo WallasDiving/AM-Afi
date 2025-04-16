@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -13,6 +12,29 @@
       background: linear-gradient(to bottom, #d0f0f6, #ffffff);
       color: #023047;
     }
+
+    /* Menú */
+    nav.menu {
+      background-color: #00b4d8;
+      padding: 1rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    nav.menu a {
+      color: white;
+      margin: 0 1.5rem;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+    nav.menu a:hover {
+      color: #ffd166;
+    }
+
     header {
       background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80');
       background-size: cover;
@@ -43,6 +65,7 @@
       position: relative;
       z-index: 1;
     }
+
     .intro {
       max-width: 800px;
       margin: 2rem auto;
@@ -50,24 +73,17 @@
       font-size: 1.2rem;
       line-height: 1.6;
     }
-        .intro2 {
+
+    .intro2, .intro3 {
       max-width: 800px;
-      margin: 2rem auto;
+      margin: 4rem auto 2rem;
       padding: 0 1rem;
-      font-size: 5rem;
-      line-height: 1.6;
-      font-weight: bold; /* Hace el texto en negrita */
-      text-align: center; /* Centra el texto */
+      font-size: 3.5rem;
+      line-height: 1.2;
+      font-weight: bold;
+      text-align: center;
     }
-        .intro3 {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-      font-size: 5rem;
-      line-height: 1.6;
-      font-weight: bold; /* Hace el texto en negrita */
-      text-align: center; /* Centra el texto */
-    }
+
     .products {
       display: flex;
       flex-wrap: wrap;
@@ -75,6 +91,7 @@
       gap: 2rem;
       padding: 2rem;
     }
+
     .product-card {
       background-color: white;
       border-radius: 12px;
@@ -112,6 +129,7 @@
     .product-card a:hover {
       background-color: #0096c7;
     }
+
     footer {
       text-align: center;
       padding: 2rem;
@@ -126,6 +144,12 @@
     <p>Con estos productos TOP para BUCEO</p>
   </header>
 
+  <!-- Menú de navegación -->
+  <nav class="menu">
+    <a href="#top">Productos Top</a>
+    <a href="#luz">Iluminación</a>
+  </nav>
+
   <section class="intro">
     <p>
       ¡Bienvenidos/as! Aquí compartiré recomendaciones de productos relacionados con buceo, snorkel y fotografía submarina. 
@@ -135,12 +159,11 @@
     </p>
   </section>
 
-  <section class="intro2">
-    <p>
-      PRODUCTOS TOP
-    </p>
+  <!-- PRODUCTOS TOP -->
+  <section id="top" class="intro2">
+    <p>PRODUCTOS TOP</p>
   </section>
-  
+
   <section class="products">
     <div class="product-card">
       <img src="https://m.media-amazon.com/images/I/71AdtBPWOrL.__AC_SY300_SX300_QL70_ML2_.jpg" alt="Cressi F1">
@@ -162,10 +185,9 @@
     </div>
   </section>
 
-  <section class="intro2">
-    <p>
-      ILUMINACIÓN
-    </p>
+  <!-- ILUMINACIÓN -->
+  <section id="luz" class="intro3">
+    <p>ILUMINACIÓN</p>
   </section>
 
   <section class="products">
