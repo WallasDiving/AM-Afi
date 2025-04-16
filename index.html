@@ -17,20 +17,24 @@
     nav.menu {
       background-color: #00b4d8;
       padding: 1rem;
-      text-align: center;
       position: sticky;
       top: 0;
       z-index: 999;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
     }
+
     nav.menu a {
       color: white;
-      margin: 0 1.5rem;
       text-decoration: none;
       font-weight: bold;
       font-size: 1.1rem;
       transition: color 0.3s ease;
     }
+
     nav.menu a:hover {
       color: #ffd166;
     }
@@ -44,6 +48,7 @@
       text-align: center;
       position: relative;
     }
+
     header::before {
       content: "";
       position: absolute;
@@ -52,18 +57,21 @@
       background: rgba(0, 0, 0, 0.5);
       z-index: 0;
     }
+
+    header h1, header p {
+      position: relative;
+      z-index: 1;
+      margin: 0;
+    }
+
     header h1 {
       font-family: 'Ubuntu', sans-serif;
-      font-size: 7rem;
-      margin: 0;
-      position: relative;
-      z-index: 1;
+      font-size: 4rem;
     }
+
     header p {
-      font-size: 3rem;
+      font-size: 1.8rem;
       margin-top: 1rem;
-      position: relative;
-      z-index: 1;
     }
 
     .intro {
@@ -75,11 +83,11 @@
       text-align: justify;
     }
 
-    .intro2, .intro3 {
+    .intro2, .intro3, .intro4, {
       max-width: 800px;
       margin: 4rem auto 2rem;
       padding: 0 1rem;
-      font-size: 3.5rem;
+      font-size: 2.5rem;
       line-height: 1.2;
       font-weight: bold;
       text-align: center;
@@ -102,21 +110,26 @@
       text-align: center;
       transition: transform 0.3s ease;
     }
+
     .product-card:hover {
       transform: translateY(-5px);
     }
+
     .product-card img {
       max-width: 100%;
       border-radius: 8px;
     }
+
     .product-card h3 {
       margin: 1rem 0 0.5rem;
       font-family: 'Ubuntu', sans-serif;
     }
+
     .product-card p {
       font-size: 0.95rem;
       color: #555;
     }
+
     .product-card a {
       display: inline-block;
       margin-top: 1rem;
@@ -127,6 +140,7 @@
       text-decoration: none;
       transition: background-color 0.3s;
     }
+
     .product-card a:hover {
       background-color: #0096c7;
     }
@@ -137,9 +151,40 @@
       font-size: 0.9rem;
       color: #777;
     }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.5rem;
+      }
+
+      header p {
+        font-size: 1.2rem;
+      }
+
+      .intro2, .intro3 {
+        font-size: 2rem;
+      }
+
+      .product-card {
+        width: 90%;
+      }
+
+      nav.menu {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 480px) {
+      nav.menu a {
+        font-size: 1rem;
+      }
+    }
   </style>
 </head>
 <body>
+
+  <!-- Header -->
   <header>
     <h1>TOPBUCEO.ES</h1>
     <p>Disfruta del océano con esta selección de los mejores productos para buceo</p>
@@ -149,14 +194,16 @@
   <nav class="menu">
     <a href="#top">Productos Top</a>
     <a href="#luz">Iluminación</a>
+    <a href="#otr">Accesorios</a>
   </nav>
 
+  <!-- Intro -->
   <section class="intro">
     <p>
       ¡Bienvenidos/as! Aquí compartiré recomendaciones de productos relacionados con buceo, snorkel y fotografía submarina. 
       Muchos de estos productos los utilizo personalmente, otros muchos son recomendaciones de amigos y conocidos del mundo
       del buceo. No se trata de recomendar cualquier producto para ganar una pequeña comisión, se trata de recomendaciones 
-      que doy a mis alumnos y clientes en en el día a día y quiero que vosotros también tengáis acceso a ellas. 🐠🤿📸
+      que doy a mis alumnos y clientes en el día a día y quiero que vosotros también tengáis acceso a ellas. 🐠🤿📸
     </p>
   </section>
 
@@ -169,19 +216,19 @@
     <div class="product-card">
       <img src="https://m.media-amazon.com/images/I/71AdtBPWOrL.__AC_SY300_SX300_QL70_ML2_.jpg" alt="Cressi F1">
       <h3>Máscara de buceo Cressi F1</h3>
-      <p>La máscara de buceo Cressi F1 es ideal tanto para buceadores con poca experiencia como para los más expertos. Prueba de ello son los más de 7 años que llevo buceando con ella.</p>
+      <p>Ideal tanto para buceadores con poca experiencia como para los más expertos. Más de 7 años usándola.</p>
       <a href="https://amzn.to/4jb3ICN" target="_blank">Ver en Amazon</a>
     </div>
     <div class="product-card">
       <img src="https://m.media-amazon.com/images/I/81tIq1XRWmL._AC_SY450_.jpg" alt="Cressi Lady Swimsuit 2mm">
       <h3>Bañador térmico Cressi Lady Swimsuit 2mm</h3>
-      <p>Bañador que añade un extra de protección térmica. Lo usa mi mujer en todas sus inmersiones. Un must have para chicas que sean algo frioleras.</p>
+      <p>Extra de protección térmica. Lo usa mi mujer en todas sus inmersiones. Must have si eres friolera.</p>
       <a href="https://amzn.to/4iL1xpJ" target="_blank">Ver en Amazon</a>
     </div>
     <div class="product-card">
       <img src="https://m.media-amazon.com/images/I/71lf7gTkToL._AC_SX425_.jpg" alt="Cressi Donatello">
       <h3>Ordenador de buceo Cressi Donatello</h3>
-      <p>Ordenador de iniciación al buceo recreativo. Con todas las funciones necesarias para disfrutar del buceo de forma segura. Nitrox, planificador de inmersiones, etc. Un ordenador para años.</p>
+      <p>Perfecto para iniciarse en el buceo recreativo. Seguro, completo y duradero.</p>
       <a href="https://amzn.to/3AUhZ6y" target="_blank">Ver en Amazon</a>
     </div>
   </section>
@@ -195,14 +242,29 @@
     <div class="product-card">
       <img src="https://m.media-amazon.com/images/I/71AdtBPWOrL.__AC_SY300_SX300_QL70_ML2_.jpg" alt="Cressi F1">
       <h3>Máscara de buceo Cressi F1</h3>
-      <p>La máscara de buceo Cressi F1 es ideal tanto para buceadores con poca experiencia como para los más expertos. Prueba de ello son los más de 7 años que llevo buceando con ella.</p>
+      <p>Ideal también con linternas frontales. Combina muy bien con luces de buceo para fotos nocturnas.</p>
       <a href="https://amzn.to/4jb3ICN" target="_blank">Ver en Amazon</a>
     </div>
   </section>
 
+  <!-- ACCESORIOS -->
+  <section id="luz" class="intro4">
+    <p>ACCESORIOS</p>
+  </section>
+
+  <section class="products">
+    <div class="product-card">
+      <img src="https://m.media-amazon.com/images/I/71AdtBPWOrL.__AC_SY300_SX300_QL70_ML2_.jpg" alt="Cressi F1">
+      <h3>Máscara de buceo Cressi F1</h3>
+      <p>Ideal también con linternas frontales. Combina muy bien con luces de buceo para fotos nocturnas.</p>
+      <a href="https://amzn.to/4jb3ICN" target="_blank">Ver en Amazon</a>
+    </div>
+ 
+  <!-- Footer -->
   <footer>
     <p>Web propiedad de Wallas Diving. Esta web participa en el programa de afiliados de Amazon. Ni topbuceo.es ni Wallas Diving 
       tienen responsabilidad legal sobre ninguna de las compras efectuadas a través de los enlaces publicados en esta web.</p>
   </footer>
+
 </body>
 </html>
